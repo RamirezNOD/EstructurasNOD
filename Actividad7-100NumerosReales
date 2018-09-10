@@ -1,0 +1,9 @@
+#100 primeros numeros reales con recursividad
+def losNumeros(num):
+    print(num)
+    if num!=100:
+        return losNumeros(num+1)
+        
+   
+num = 1
+losNumeros(num)
