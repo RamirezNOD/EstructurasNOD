@@ -1,0 +1,16 @@
+#Fibonacci con Iteraccion
+num = int(input('Ingresa numero para serie fibonacci: '))
+for cont in range(0,num):
+    num += cont
+    
+print (num)
+
+
+#Fibonacci con Recursividad
+def fibo(num):
+    if num == 0:
+        return 0
+    else:
+        return num + fibo(num-1)
+
+print(fibo(int(input('Ingresa numero para factorial: '))))
