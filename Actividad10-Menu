@@ -1,1 +1,64 @@
-#Menu de weas
+#Actividades 7,8 y 9 en menu
+import sys
+
+def miMenu(opc):                          #Metodo para simular un switch usando diccionarios
+    switcher = {
+        1: numeros,                       #Se llamara al metodo segun la opcion
+        2: elFactorial,
+        3: elFibonacci
+    }
+    func = switcher.get(opc, lambda: "opcion invalida")
+    print (func())
+
+
+
+#----- Metodo para Numeros hasta el 100 -----
+def numeros():
+    def losNumeros(num):                    #Metodo para desplegar los numeros
+        print(num)                          #Imprimimos el numero
+        if num!=100:                        #Comprobamos que no haya llegado a 100
+            return losNumeros(num+1)        #Ejecutamos la recursividad mandando el numero aumentado en 1
+        
+    losNumeros(1)                           #Empezamos el proceso con el numero 1
+
+
+
+
+#----- Metodo para Factorial -----
+def elFactorial():
+    def factorial(num):                                             #Metodo para recursividad
+        if num == 0:                                                #La condicion para retornar al terminar
+            return 1            
+        else:
+            return num * factorial(num-1)                           #Retornamos el numero multiplicado por, invocamos el metodo y mandamos el numero utilizado reducido en uno
+
+    print(factorial(int(input('Ingresa numero para factorial: ')))) #Imprimimos lo que retorne el metodo mandando como parametro el valor capturado
+
+
+
+
+#----- Metodo para Fibonoacci -----
+def elFibonacci():
+    def fibo(num):                                              #Metodo para el fibonacci
+        print(num, end="", flush=True)                          #Imprimimos los numeros a sumar
+        if num == 1:                                            #Si llegamos a 1 pararemos la recursividad
+            return 1
+        else:
+            print('+',end="", flush=True)                       #Por detalles esteticos imprimimos un +
+            return num + fibo(num-1)                            #Retornamos la suma del numero mas lo retornado del metodo recursivo
+
+    print(' = ' + str(fibo(int(input('Ingresa numero para sumatoria: '))))) #Imprimimos el resultado invocando al metodo
+
+
+
+#----- Desplegar nuestro menu -----
+while True:
+    opcion = int(input('\n----------------\nMENU:\n\t1)Primeros 100 numeros\n\t2)Factorial\n\t3)Fibonacci\n\t0)Salir\n\t\tOpcion:'))
+    if opcion == 1 or opcion == 2 or opcion == 3:         #Comprobamos que sea una opcion valida
+        miMenu(opcion)
+    else:
+        if opcion == 0:                                   #Si la opcion es 0 paramos el ciclo
+            break;
+        else:                                             #Se advierte si es una opcion no valida
+            print('opcion invalida')                        
+    
