@@ -1,9 +1,8 @@
 #100 primeros numeros reales con recursividad
-def losNumeros(num):
-    print(num)
-    if num!=100:
-        return losNumeros(num+1)
+def losNumeros(num):                    #Metodo para desplegar los numeros
+    print(num)                          #Imprimimos el numero
+    if num!=100:                        #Comprobamos que no haya llegado a 100
+        return losNumeros(num+1)        #Ejecutamos la recursividad mandando el numero aumentado en 1
         
    
-num = 1
-losNumeros(num)
+losNumeros(1)                           #Invocamos al metodo y mandamos como parametro el numero inicial
