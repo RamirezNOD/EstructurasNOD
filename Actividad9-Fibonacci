@@ -1,16 +1,19 @@
 #Fibonacci con Iteraccion
-num = int(input('Ingresa numero para serie fibonacci: '))
-for cont in range(0,num):
-    num += cont
+num = int(input('Ingresa numero para serie fibonacci: '))   #Capturamos el numero
+fibo = 0                                                    #Variable para calcular la suma
+for cont in range(0,num+1):                                 #For para calcular desde 0 hasta el numero ingresado
+    fibo += cont                                            #Operacion para sumar
+    print (fibo)                                            #Imprimimos lo que nos va dando la suma
     
-print (num)
 
 
-#Fibonacci con Recursividad
-def fibo(num):
-    if num == 0:
-        return 0
+#Fibonacci con Recursividad 
+def fibo(num):                                              #Metodo para el fibonacci
+    print(num, end="", flush=True)                          #Imprimimos los numeros a sumar
+    if num == 1:                                            #Si llegamos a 1 pararemos la recursividad
+        return 1
     else:
-        return num + fibo(num-1)
+        print('+',end="", flush=True)                       #Por detalles esteticos imprimimos un +
+        return num + fibo(num-1)                            #Retornamos la suma del numero mas lo retornado del metodo recursivo
 
-print(fibo(int(input('Ingresa numero para factorial: '))))
+print(' = ' + str(fibo(int(input('Ingresa numero para sumatoria: '))))) #Imprimimos el resultado invocando al metodo
