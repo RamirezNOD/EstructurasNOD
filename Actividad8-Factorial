@@ -1,17 +1,17 @@
 #Factorial con Iteracion
-num = int(input('Ingresa numero para factorial: '))
-for cont in range(1,num):
-    num *= cont
+num = int(input('Ingresa numero para factorial: '))             #Capturamos el numero ingresado
+for cont in range(1,num):                                       #El For empezara en 1 y terminara en el numero ingresado
+    num *= cont                                                 #Hacemos la multiplicacion correspondiente
     
-print (num)
+print (num)                                                     #Imprimimos el numero
 
 
 
 #Factorial con Recursividad
-def factorial(num):
-    if num == 0:
-        return 1
+def factorial(num):                                             #Metodo para recursividad
+    if num == 0:                                                #La condicion para retornar al terminar
+        return 1            
     else:
-        return num * factorial(num-1)
+        return num * factorial(num-1)                           #Retornamos el numero multiplicado por, invocamos el metodo y mandamos el numero utilizado reducido en uno
 
-print(factorial(int(input('Ingresa numero para factorial: '))))
+print(factorial(int(input('Ingresa numero para factorial: ')))) #Imprimimos lo que retorne el metodo mandando como parametro el valor capturado
