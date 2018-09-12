@@ -1,0 +1,38 @@
+index = 0
+
+class Stack:
+    index = 0
+    
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, item, maxIndex):
+         global index
+         index += 1
+         if index < maxIndex:             
+             self.stack.append(item)
+         else:
+             return False
+         
+         
+
+    def peek(self):
+        print (index - 1)
+        return self.stack[index - 1]
+        
+        
+        
+        
+        
+        
+        
+maxIndex = 5     
+        
+pila = Stack()
+pila.push("wea1",maxIndex)
+pila.push("wea2",maxIndex)
+pila.push("wea3",maxIndex)
+pila.push("wea4",maxIndex)
+pila.push("wea5",maxIndex)
+print pila.peek()
+        
