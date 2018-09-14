@@ -8,31 +8,34 @@ class Stack:
     
     def push(self, item, maxIndex):
          global index
-         index += 1
          if index < maxIndex:             
              self.stack.append(item)
+             index += 1
          else:
              return False
          
          
 
     def peek(self):
-        print (index - 1)
         return self.stack[index - 1]
         
+    def pop(self):      
+        global index
+        if index >= 0:
+            index -= 1
+            self.stack.pop()
         
         
         
         
         
-        
-maxIndex = 5     
-        
+
+maxIndex = input("Indice Maximo: ")          
 pila = Stack()
-pila.push("wea1",maxIndex)
-pila.push("wea2",maxIndex)
-pila.push("wea3",maxIndex)
-pila.push("wea4",maxIndex)
-pila.push("wea5",maxIndex)
+
+for i in range(maxIndex):
+    pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
+
 print pila.peek()
-        
+pila.pop()
+print pila.peek()
