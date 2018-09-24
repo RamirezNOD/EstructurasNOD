@@ -18,12 +18,7 @@ class Stack:
 
     def peek(self):
         return self.stack[index - 1]
-        
-    def pop(self):      
-        global index
-        if index >= 0:
-            index -= 1
-            self.stack.pop()
+
         
         
         
@@ -36,6 +31,4 @@ pila = Stack()
 for i in range(maxIndex):
     pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
 
-print pila.peek()
-pila.pop()
 print pila.peek()
