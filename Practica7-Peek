@@ -1,0 +1,56 @@
+index = 0
+
+class Stack:
+    index = 0
+    
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, item, maxIndex):
+         global index
+         if index < maxIndex:             
+             self.stack.append(item)
+             index += 1
+         else:
+             return False
+        
+    def pop(self):      
+        global index
+        if index >= 0:
+            index -= 1
+            self.stack.pop()
+         
+
+    def peek(self, param):
+        if param == 1:
+            print("Indice: " + str(index - 1) + " => " + str(self.stack[index - 1]))
+        else:
+            if param == 2:
+                numEncontrados = 0
+                buscar = input("Elemento a buscar: ")
+                for i in range(maxIndex):
+                    if self.stack[i] == buscar:
+                        numEncontrados += 1
+                        print "Indice encontrado en: "+str(i)
+                if numEncontrados == 0:
+                    print "No existe el elemento"
+            else:
+                if param == 3:
+                    for i in range(maxIndex):
+                        print "Indice: " + str(i)+" => "+ str(self.stack[i])
+                else:
+                    print("Opcion no valida")
+        
+  
+        
+
+maxIndex = int(input("Indice Maximo: ") )         
+pila = Stack()
+
+for i in range(maxIndex):
+    pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
+    
+
+opcionPeek = input("Para Peek:\n\t1)Actual\n\t2)Buscar elemento\n\t3)Todos los elementos\n\t\tOpcion: ")
+
+pila.peek(opcionPeek)
