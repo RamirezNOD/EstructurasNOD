@@ -1,0 +1,31 @@
+index = 0
+
+class Stack:
+    index = 0
+    
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, item, maxIndex):
+         global index
+         if index < maxIndex:             
+             self.stack.append(item)
+             index += 1
+         else:
+             return False
+        
+    def pop(self):      
+        global index
+        if index >= 0:
+            index -= 1
+            self.stack.pop()
+        
+       
+
+maxIndex = input("Indice Maximo: ")          
+pila = Stack()
+
+for i in range(maxIndex):
+    pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
+    
+pila.pop()
