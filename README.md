@@ -1,7 +1,4 @@
-# EstructurasNOD
-
 <h1>Estructuras de datos</h1>
-<b>Alumno: </b>Ramirez Gonzalez Leonardo Ramses
 <ul>
   <li b>ed-tarea1: </b> <i> Clasificacion de las estructuras de datos</i>
   <li b>ed-tarea2: </b> <i> Tipos de datos abstractos</i>
