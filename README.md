@@ -19,4 +19,5 @@
   <li b>Actividad4: </b> <i> Recursividad: (menu, tres tareas anteriores)</i>
   <li b>Actividad5: </b> <i> Pilas: Operacion push</i>
   <li b>Actividad6: </b> <i> Pilas: Operacion pop</i>
+  <li b>Actividad6: </b> <i> Pilas: Operacion peek</i>
 </ul>
