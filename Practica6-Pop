@@ -18,7 +18,7 @@ class Stack:
         global index
         if index >= 0:
             index -= 1
-            self.stack.pop()
+            return self.stack.pop()
         
        
 
@@ -28,4 +28,4 @@ pila = Stack()
 for i in range(maxIndex):
     pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
     
-pila.pop()
+print pila.pop()
