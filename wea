@@ -1,0 +1,29 @@
+index = 0
+maxIndex = 0
+
+class Queue:
+    
+    def __init__(self):
+        self.queue = []
+            
+    def create(self):
+        global maxIndex
+        for i in range maxIndex:
+                self.queue.append(0)
+        
+    def add (self, dato):
+        global index 
+        global maxindex
+        if index < maxIndex:
+            self.queue[index] = dato
+            index += 1
+        
+    def remove(self):
+        global index
+            
+        
+    #def pop(self):      
+        #global index
+        #if index >= 0:
+            #index -= 1
+            #self.stack.pop()
