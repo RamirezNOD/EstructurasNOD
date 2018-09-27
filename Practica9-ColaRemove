@@ -1,0 +1,47 @@
+index = 0
+maxIndex = 0
+
+class Queue:
+    
+    def __init__(self):
+        self.queue = []
+            
+    def create(self):
+        global maxIndex
+        for i in range (0, maxIndex):
+                self.queue.append(0)
+        
+    def add(self, dato):
+        global index 
+        global maxindex
+        if index < maxIndex:
+            self.queue[index] = dato
+            index += 1
+        else:
+            print("Cola llena.")
+            
+    def remove(self):
+        global maxIndex
+        for i in range (0, maxIndex - 1):
+            cola[i] = cola[i+1]
+        cola[maxIndex] = 0
+
+
+cola = Queue()
+opcion = 0
+
+maxIndex = int(input("Ingrese numero de indices: "))
+cola.create()
+
+while (opcion != 5):
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Remover\n\t 5)Salir \n\t\t"))
+    if opcion == 1:
+        cola.add(input("Ingresa elemento ["+str(index)+"]: "))
+    else: 
+        if opcion == 2:
+            cola.remove()
+        else:
+            if opcion != 5:
+                print("Ingrese opcion valida")
+            
+print("Adios.")  
