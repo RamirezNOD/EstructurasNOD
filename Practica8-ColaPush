@@ -1,0 +1,40 @@
+#Practica 8
+#Ramirez Gonzalez
+
+index = 0
+maxIndex = 0
+
+class Queue:    
+    def __init__(self):
+        self.queue = []
+            
+    def create(self):
+        global maxIndex
+        for i in range (0, maxIndex):                     #Se itera para inicializar en 0 todos los indices
+                self.queue.append(0)
+        
+    def add (self, dato):
+        global index 
+        global maxindex
+        if index < maxIndex:                              #Comprobamos que no haya desbordamiento y cambiamos el elemento
+            self.queue[index] = dato
+            index += 1
+        else:
+            print("Cola llena.")                          #De estar llena solo desplegamos una alerta
+        
+
+cola = Queue()
+opcion = 0
+
+maxIndex = int(input("Ingrese numero de indices: "))      #Preguntamos la dimension de la cola
+cola.create()
+
+while (opcion != 2):                                      #Menu
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Salir \n\t\t"))   
+    if opcion == 1:
+        cola.add(input("Ingresa elemento ["+str(index)+"]: "))
+    else:
+        if opcion != 2:
+            print("Ingrese opcion valida")
+  
+print("Adios.")  
