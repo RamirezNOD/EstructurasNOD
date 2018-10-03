@@ -10,6 +10,7 @@
   <li b>Tarea8: </b> <i> Representacion en memoria de las Pilas</i>
   <li b>Tarea9: </b> <i> Operaciones básicas de las Pilas</i>
   <li b>Tarea10: </b> <i> Colas</i>
+  <li b>Tarea11: </b> <i> Colas circulares</i>
 </ul>
 
 <ul>
@@ -20,4 +21,7 @@
   <li b>Actividad5: </b> <i> Pilas: Operacion push</i>
   <li b>Actividad6: </b> <i> Pilas: Operacion pop</i>
   <li b>Actividad7: </b> <i> Pilas: Operacion peek</i>
+  <li b>Actividad8: </b> <i> Colas: Operacion add</i>
+  <li b>Actividad9: </b> <i> Colas: Operacion remove</i>
+  <li b>Actividad10: </b> <i> Colas: Operacion show</i>
 </ul>
