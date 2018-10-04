@@ -1,3 +1,5 @@
+#Practica pila Pop
+
 index = 0
 
 class Stack:
@@ -5,7 +7,7 @@ class Stack:
     def __init__(self):
         self.stack = []
     
-    def push(self, item, maxIndex):
+    def push(self, item, maxIndex):                     #Agregar un elemento si no se desborda.
          global index
          if index < maxIndex:             
              self.stack.append(item)
@@ -13,7 +15,7 @@ class Stack:
          else:
              return False
         
-    def pop(self):      
+    def pop(self):                                      #Elimina el ultimo elemento ingresado
         global index
         if index >= 0:
             index -= 1
@@ -24,7 +26,7 @@ class Stack:
 maxIndex = input("Indice Maximo: ")          
 pila = Stack()
 
-for i in range(maxIndex):
+for i in range(maxIndex):                               #Ingresamos los elementos a meter en la pila
     pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
     
 print pila.pop()
