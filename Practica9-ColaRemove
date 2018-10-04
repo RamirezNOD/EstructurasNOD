@@ -1,3 +1,5 @@
+#Practica Cola Pop/remove
+
 index = 0
 maxIndex = 0
 
@@ -6,12 +8,12 @@ class Queue:
     def __init__(self):
         self.queue = []
             
-    def create(self):
+    def create(self):                                           #Iniciamos con la cola en 0s            
         global maxIndex
         for i in range (0, maxIndex):
                 self.queue.append(0)
         
-    def add(self, dato):
+    def add(self, dato):                                        #Para añadir un elemento
         global index 
         global maxindex
         if index < maxIndex:
@@ -20,43 +22,31 @@ class Queue:
         else:
             print("Cola llena.")
             
-    def remove(self):
+    def remove(self):                                                
         global maxIndex
         global index
-        print ("Se ha eliminado: " + str(self.queue[index - 1]))
-        for i in range (0, maxIndex - 1):
+        print ("Se ha eliminado: " + str(self.queue[0]))        #Se muestra el elemento a eliminar
+        for i in range (0, maxIndex - 1):                       #Se itera para recorrer los numeros
             self.queue[i] = self.queue[i+1]
-        self.queue[maxIndex - 1] = 0
+        self.queue[maxIndex - 1] = 0                            #Se le asigna 0 al ultimo elemento
         if index != 0:
             index -= 1
-        
-    def showAll(self):
-        print (self.queue)
-
-    def element(self):
-        print (self.queue[0])
-
+            
 cola = Queue()
 opcion = 0
 
-maxIndex = int(input("Ingrese numero de indices: "))
+maxIndex = int(input("Ingrese numero de indices: "))            #Preguntamos los indices 
 cola.create()
 
-while (opcion != 5):
-    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Remover\n\t 3)Ultimo elemento\n\t 4)Mostrar todos\n\t 5)Salir \t\t"))
+while (opcion != 5):                                            #Menu para las operaciones
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Remover\n\t 5)Salir \t\t"))
     if opcion == 1:
         cola.add(input("Ingresa elemento ["+str(index)+"]: "))
     else: 
         if opcion == 2:
             cola.remove()
         else:
-            if opcion == 3:
-                cola.element()
-            else: 
-                if opcion == 4:
-                    cola.showAll()
-                else:
-                    if opcion != 5:
-                        print("Ingrese opcion valida")
+            if opcion != 5:
+                print("Ingrese opcion valida")
             
 print("Adios.")  
