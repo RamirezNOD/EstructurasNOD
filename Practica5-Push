@@ -1,15 +1,17 @@
+#Practica Pila Push
+
 index = 0
 
 class Stack:
     index = 0
     
-    def __init__(self):
+    def __init__(self):                                                     #Inicializar la pila
         self.stack = []
     
-    def push(self, item, maxIndex):
+    def push(self, item, maxIndex):                                         #Metodo para agregar elemento
          global index
-         if index < maxIndex:             
-             self.stack.append(item)
+         if index < maxIndex:                                               #Condicion para controlar desbordamiento
+             self.stack.append(item)                                        #Aqui se agrega el elemento al arreglo
              index += 1
          else:
              return False
@@ -20,8 +22,8 @@ class Stack:
         
         
 
-maxIndex = input("Indice Maximo: ")          
+maxIndex = input("Indice Maximo: ")                                         #Se pide el maximo de elementos
 pila = Stack()
 
-for i in range(maxIndex):
+for i in range(maxIndex):                                                   #Ingresamos los elemenetos
     pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
