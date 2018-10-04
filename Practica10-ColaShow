@@ -25,12 +25,13 @@ class Queue:
     def remove(self):                                           #remover un elemento y recorrer la cola, dejando 0 en el ultimo
         global maxIndex
         global index
-        print ("Se ha eliminado: " + str(self.queue[0]))
-        for i in range (0, maxIndex - 1):
-            self.queue[i] = self.queue[i+1]
-        self.queue[maxIndex - 1] = 0
         if index != 0:
+            print ("Se ha eliminado: " + str(self.queue[0]))
+            for i in range (0, maxIndex - 1):
+                self.queue[i] = self.queue[i+1]
+            self.queue[maxIndex - 1] = 0        
             index -= 1
+        else: print("No hay elementos a borrar")
         
     def showAll(self):                                          #Muestra todos los elementos en la cola
         print (self.queue)
