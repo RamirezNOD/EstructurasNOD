@@ -1,3 +1,5 @@
+#Practica pila Peek
+
 index = 0
 
 class Stack:
@@ -6,7 +8,7 @@ class Stack:
     def __init__(self):
         self.stack = []
     
-    def push(self, item, maxIndex):
+    def push(self, item, maxIndex):                                         #Metodo para añadir un elemento
          global index
          if index < maxIndex:             
              self.stack.append(item)
@@ -14,18 +16,18 @@ class Stack:
          else:
              return False
         
-    def pop(self):      
+    def pop(self):                                                          #Metodo para eliminar un elemento
         global index
         if index >= 0:
             index -= 1
             self.stack.pop()
          
 
-    def peek(self, param):
+    def peek(self, param):                                                  #Este metodo compara la accion que se desea realizar
         if param == 1:
-            print("Indice: " + str(index - 1) + " => " + str(self.stack[index - 1]))
+            print("Indice: " + str(index - 1) + " => " + str(self.stack[index - 1]))        #Muestra el ultimo elemento
         else:
-            if param == 2:
+            if param == 2:                                                                  #Para buscar un elemento
                 numEncontrados = 0
                 buscar = input("Elemento a buscar: ")
                 for i in range(maxIndex):
@@ -35,7 +37,7 @@ class Stack:
                 if numEncontrados == 0:
                     print "No existe el elemento"
             else:
-                if param == 3:
+                if param == 3:                                                              #Imprime todos los elementos
                     for i in range(maxIndex):
                         print "Indice: " + str(i)+" => "+ str(self.stack[i])
                 else:
@@ -47,10 +49,10 @@ class Stack:
 maxIndex = int(input("Indice Maximo: ") )         
 pila = Stack()
 
-for i in range(maxIndex):
+for i in range(maxIndex):                                                                   #Ingresar todos los elementos
     pila.push(input("Elemnto a ingresar en: "+ str(i) +": "),maxIndex)
     
 
-opcionPeek = input("Para Peek:\n\t1)Actual\n\t2)Buscar elemento\n\t3)Todos los elementos\n\t\tOpcion: ")
+opcionPeek = input("Para Peek:\n\t1)Actual\n\t2)Buscar elemento\n\t3)Todos los elementos\n\t\tOpcion: ")       #Menu para peek
 
 pila.peek(opcionPeek)
