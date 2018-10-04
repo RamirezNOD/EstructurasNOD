@@ -1,18 +1,19 @@
+#Practica cola peek/show
 
 index = 0
 maxIndex = 0
 
 class Queue:
     
-    def __init__(self):
+    def __init__(self):                                         #inicializa la cola
         self.queue = []
             
-    def create(self):
+    def create(self):                                           #Llena la cola con 0s
         global maxIndex
         for i in range (0, maxIndex):
                 self.queue.append(0)
         
-    def add(self, dato):
+    def add(self, dato):                                        #Metodo para agregar elemento en el indice correspondiente
         global index 
         global maxindex
         if index < maxIndex:
@@ -21,7 +22,7 @@ class Queue:
         else:
             print("Cola llena.")
             
-    def remove(self):
+    def remove(self):                                           #remover un elemento y recorrer la cola, dejando 0 en el ultimo
         global maxIndex
         global index
         print ("Se ha eliminado: " + str(self.queue[0]))
@@ -31,18 +32,18 @@ class Queue:
         if index != 0:
             index -= 1
         
-    def showAll(self):
+    def showAll(self):                                          #Muestra todos los elementos en la cola
         print (self.queue)
 
-    def firstElement(self):
+    def firstElement(self):                                     #Muestra el primero en la cola
         global maxIndex
         print (self.queue[0])
         
-    def lastElement(self):
+    def lastElement(self):                                      #Muestra el ultimo elemento en la cola
         print (self.queue[maxIndex - 1])
         
-    def element(self, elemento):
-        global maxIndex
+    def element(self, elemento):                                #Buscamos si existe el elemeto que buscamos, de ser asi
+        global maxIndex                                         #  hacemos una cadena que imprimira los indices donde se encontraron
         encontrado = 'Encontrado en: '
         for i in range (0, maxIndex):
             if (str(self.queue[i]) == str(elemento)):
@@ -56,10 +57,10 @@ class Queue:
 cola = Queue()
 opcion = 0
 
-maxIndex = int(input("Ingrese numero de indices: "))
+maxIndex = int(input("Ingrese numero de indices: "))            
 cola.create()
 
-while (opcion != 5):
+while (opcion != 5):                                            #Menu de operaciones
     opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Remover\n\t 3)Buscar Elemento\n\t 5)Salir \t\t"))
     if opcion == 1:
         cola.add(input("Ingresa elemento ["+str(index)+"]: "))
