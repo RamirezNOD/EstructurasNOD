@@ -1,0 +1,10 @@
+#Ramirez Gonzalez Leonardo Ramses
+#Examen U2. Problema 1
+
+def sumar(num,contador):
+    if (contador < 10):
+        sumar(num+contador,contador+1)
+    else:
+        print("Resultado: " + str(num))
+        
+sumar(0,1)
