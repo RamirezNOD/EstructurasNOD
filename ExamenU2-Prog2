@@ -1,0 +1,10 @@
+#Ramirez Gonzalez Leonardo Ramses
+#Examen U2. Problema 2
+
+def potencia(num,pot):
+    if (pot > 0):
+        potencia(num * 2, pot-1)
+    else:
+        print("La potencia es: " + str(num))
+        
+potencia(1,int(input("Potencia a calcular: ")))
