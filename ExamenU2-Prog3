@@ -1,0 +1,30 @@
+#Ramirez Gonzalez Leonardo Ramses
+#Examen U2. Problema 3
+
+index = 0
+class Stack:
+    
+    
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, item, maxIndex):                                         
+         global index
+         if index < maxIndex:             
+             self.stack.append(item)
+             index += 1
+         else:
+             print("Overflow error.")
+         
+
+    def peek(self, maxIndex):                                                  
+        for i in range(maxIndex - 1, -1, -1):
+                        print ("\tVersion " + str(i+1) + " => "+ str(self.stack[i]))
+                    
+pilaVersiones = Stack()
+numVersiones = int(input("Numero de versiones: "))
+for i in range(0, numVersiones):
+    pilaVersiones.push(input("Version "+str(i+1)+": "),numVersiones)
+    
+print("\nLas versiones fueron: ")
+pilaVersiones.peek(numVersiones)
