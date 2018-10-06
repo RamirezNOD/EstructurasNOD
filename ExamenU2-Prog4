@@ -1,0 +1,50 @@
+#Ramirez Gonzalez Leonardo Ramses
+#Examen U2. Problema 4
+
+index = 0
+
+class Queue:
+    
+    def __init__(self):
+        self.queue = []
+            
+    def create(self):  
+        for i in range (0, 5):
+                self.queue.append(0)
+        
+    def add(self, dato):
+        global index
+        self.queue[index] = dato
+        print("\n\t\t" + str(dato) + " en la posicion " + str(index+1))
+        index += 1
+            
+    def remove(self):  
+        global index
+        if index != 0:
+            print (str("\n\t\t"+ str(self.queue[0])) + " ya fue atendido.")        
+            for i in range (0, 4):                       
+                self.queue[i] = self.queue[i+1]
+            self.queue[4] = 0
+            index -= 1
+        else:
+            print("\n\t\tNo hay clientes.")
+            
+cola = Queue()           
+cola.create()
+opcion=0
+
+while (opcion != 3):                                            
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Nuevo cliente\n\t 2)Cliente atendido\n\t 3)Cerrar tienda \t\t"))
+    if opcion == 1:
+        if index < 5:
+            cola.add(input("Ingresa cliente: "))
+        else:
+            print("\n\t\tLa Fila esta llena.")
+    else: 
+        if opcion == 2:
+            cola.remove()
+        else:
+            if opcion != 3:
+                print("Ingrese opcion valida")
+            
+print("Tienda cerrada, disculpe las molestias.") 
