@@ -1,5 +1,4 @@
 
-
 class Queue:    
     def __init__(self,nElems):
         self.queue = []
@@ -34,8 +33,8 @@ while (opcion != 5):
     opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 5)Salir \n\t\t"))   
     if opcion == 1:
         cola.add(input("Ingresa elemento: "))
-        else:
-            if opcion != 5:
-                print("Ingrese opcion valida")
+    else:
+        if opcion != 5:
+            print("Ingrese opcion valida")
   
 print("Adios.") 
