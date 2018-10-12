@@ -1,0 +1,51 @@
+
+
+class Queue:    
+    def __init__(self,nElems):
+        self.queue = []
+        self.front=0
+        self.rear=0
+        self.maxElem=nElems
+            
+    def create(self):
+        for i in range (0, self.maxElem):                    
+            self.queue.append(0)
+        
+    def add (self, dato):
+        if ((self.rear == self.front and self.queue[self.rear] != 0) or (self.front == 0 and self.rear == self.maxElem)):
+            print("Cola llena bro. :/")
+        else:  
+            self.queue[self.rear] = dato             
+            self.rear += 1            
+            if self.rear >= self.maxElem:
+                self.rear = 0
+                  
+            print (self.queue)
+            
+    def remove(self):                                            
+        print("Se ha eliminado: "+str(self.queue[self.front]))        
+        self.queue[self.front] = 0
+        self.front += 1        
+        print (self.queue)
+        if self.front == self.maxElem:
+            self.front = 0
+    
+
+opcion = 0
+
+maxElem = int(input("Ingrese numero de indices: "))    
+cola = Queue(maxElem)  
+cola.create()
+
+while (opcion != 5):                                      
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 2)Eliminar elemento\n\t 5)Salir \n\t\t"))   
+    if opcion == 1:
+        cola.add(input("Ingresa elemento: "))
+    else:
+        if opcion == 2:
+            cola.remove()
+        else:
+            if opcion != 5:
+                print("Ingrese opcion valida")
+  
+print("Adios.") 
