@@ -1,0 +1,51 @@
+
+class Queue:    
+    def __init__(self,nElems):
+        self.queue = []
+        self.front=0
+        self.rear=0
+        self.frontDer=nElems-1
+        self.rearDer=nElems-1
+        self.maxElem=nElems
+            
+    def create(self):
+        for i in range (0, self.maxElem):                    
+            self.queue.append(0)
+        
+    def add (self, dato, flujo):
+        if(self.rear-1 != self.rearDer):
+            if flujo == 1:
+                self.queue[self.rear] = dato
+                self.rear += 1
+            else:
+                self.queue[self.rearDer] = dato
+                self.rearDer -= 1
+                
+        else:
+            print("Cola llena.")
+
+        print (self.queue)
+    
+
+opcion = 0
+
+maxElem = int(input("Ingrese numero de indices: "))    
+cola = Queue(maxElem)  
+cola.create()
+
+while (opcion != 5):                                      
+    opcion = int(input("\n\nOpcion a realizar: \n\t 1)Ingresar elemento\n\t 5)Salir \t"))   
+    if opcion == 1:
+        opcion = int(input("\t\t\t1)Ingresar por derecha\n\t\t\t2)Ingresar por izquierda \t"))
+        if opcion == 1:
+            cola.add(input("Ingresar elemento: "),1)
+        else:
+            if opcion == 2:
+                cola.add(input("Ingresar elemento: "),2)
+            else:
+                print("Opcion invalida")
+    else:
+        if opcion != 5:
+            print("Ingrese opcion valida")
+  
+print("Adios.") 
