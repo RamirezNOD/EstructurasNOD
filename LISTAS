@@ -4,25 +4,33 @@ class Nodo(object):
     def __init__(self, data):
         self.data = data
         self.next = None
+        
+    def push(self, r):        
+        global ultimoNodo
+        if r.next != None:
+            r.next = self
+        else:
+            
+            
+        self.next = sigNodo
+        
+            
    
 
-miNodo = Nodo
-arregloNodos = []
 opcion = 0
+r = Nodo("<Raiz>")
+sigNodo = Nodo(".")
 
 while opcion != 5:
     opcion = input("MENU:\n\t1)Agregar Nodo  ")
     if opcion == 1:
-        miNodo = Nodo(input("Wea: "))
-        if (len(arregloNodos) != 0):
-            miNodo.next = arregloNodos[len(arregloNodos)-1]
-        arregloNodos.append(miNodo)
-        
-        
+        miNodo = Nodo(input("Nuevo nodo: "))
+        miNodo.push(r)
     else: 
         if opcion == 5:
             print "Goodbye :)"
         else:
             print("Ingresa una opcion valida")
-         
-
+            
+            
+            
