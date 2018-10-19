@@ -1,3 +1,4 @@
+apuntador = None
 
 class Nodo(object):
     
@@ -5,32 +6,35 @@ class Nodo(object):
         self.data = data
         self.next = None
         
-    def push(self, r):        
-        global ultimoNodo
-        if r.next != None:
-            r.next = self
-        else:
+    def push(self):
+        global apuntador
+        apuntador.next = self        
+        apuntador = self
             
-            
-        self.next = sigNodo
-        
-            
+    def peek(raiz):
+        reco = raiz
+        mostrar = ""
+        while (reco != None):
+            mostrar = mostrar + "[" + str(reco.data) + "] "
+            reco = reco.next
+        print (mostrar)
    
 
 opcion = 0
-r = Nodo("<Raiz>")
-sigNodo = Nodo(".")
+raiz = Nodo("raiz")
+apuntador = raiz
+miNodo = None
 
 while opcion != 5:
-    opcion = input("MENU:\n\t1)Agregar Nodo  ")
+    opcion = input("\nMENU:\n\t1)Agregar Nodo\n\t2)Leer nodos\t  ")
     if opcion == 1:
-        miNodo = Nodo(input("Nuevo nodo: "))
-        miNodo.push(r)
+        miNodo = Nodo(input("Ingresa nodo: "))
+        miNodo.push()
     else: 
-        if opcion == 5:
-            print "Goodbye :)"
+        if opcion == 2:
+            Nodo.peek(raiz)
         else:
-            print("Ingresa una opcion valida")
-            
-            
-            
+            if opcion == 5:
+                print "Goodbye :)"
+            else:
+                    print("Ingresa una opcion valida")
