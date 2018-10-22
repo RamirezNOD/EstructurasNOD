@@ -38,3 +38,63 @@ while opcion != 5:
                 print "Goodbye :)"
             else:
                     print("Ingresa una opcion valida")
+                    
+                    
+                    
+                    
+                    
+ #WEAAAAAAAAAAAAAAAAAAAAAAAAAAa
+ 
+ apuntador = None
+
+class Nodo(object):
+    
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+    def push(self):
+        global apuntador
+        apuntador.next = self        
+        apuntador = self
+        
+    def pop(self, met, raiz):
+        global apuntador
+        
+        reco = raiz
+        if met == 1:
+            while(reco.next) != apuntador):
+                reco = reco.next
+            del apuntador
+            apuntador = reco
+            
+    def peek(raiz):
+        reco = raiz
+        mostrar = ""
+        while (reco != None):
+            mostrar = mostrar + "[" + str(reco.data) + "] "
+            reco = reco.next
+        print (mostrar)
+   
+
+opcion = 0
+raiz = Nodo("raiz")
+apuntador = raiz
+miNodo = None
+
+while opcion != 5:
+    opcion = input("\nMENU:\n\t1)Agregar Nodo\n\t2)Eliminar nodo\n\t3)Leer nodos\t  ")
+    if opcion == 1:
+        miNodo = Nodo(input("Ingresa nodo: "))
+        miNodo.push()
+    else: 
+        if opcion == 2:
+            miNodo.pop(input("\tMenu Pop:\n\t\t1)Eliminar ultimo nodo\n\t\t2)Seleccionar nodo a elminar\n\t\t3)Eliminar raiz\t"),raiz)
+        else:
+            if opcion == 3:
+                Nodo.peek(raiz)
+            else:
+                if opcion == 5:
+                    print "Goodbye :)"
+                else:
+                    print("Ingresa una opcion valida")
