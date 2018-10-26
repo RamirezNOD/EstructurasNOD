@@ -15,38 +15,42 @@ class Nodo(object):
         nodosDer = ""
         nodosAct = ""        
         
-        while (direcc != 3):
+        while (direcc != 4):
             if (apuntador.left == None):
                 nodosIzq = ""
             else:
-                nodosIzq = apuntador.data
+                nodosIzq = apuntador.left.data
                 
             if (apuntador.right == None):
                 nodosDer = ""  
             else:
-                nodosDer = apuntador.data
+                nodosDer = apuntador.right.data
                 
             nodosAct = apuntador.data
                 
             print ("("+nodosIzq+") <- "+"("+nodosAct+")"+" -> ("+nodosDer+")")
-            direcc = input("\n\t\t1)Izquierda\n\t\t2)Derecha\t")
+            direcc = input("\n\t\t1)Izquierda\n\t\t2)Derecha\n\t\t3)Regresar a la raiz\t")
             if (direcc == 1):
                 if (apuntador.left != None):
                     apuntador = apuntador.left
                 else: 
                     apuntador.left = self
-                    direcc = 3
+                    direcc = 4
+                    print("Ha sido ingresado en la izquierda: " + self.data)
             else: 
                 if (direcc == 2):
-                    if (apuntador.left != None):
+                    if (apuntador.right != None):
                         apuntador = apuntador.right
                     else:
                         apuntador.right = self
-                        direcc = 3
+                        direcc = 4                  
+                        print("Ha sido ingresado en la derecha: " + self.data)
                 else: 
-                    print("Ingresa una opcion valida")
+                    if (direcc == 3):
+                        apuntador = raiz
+                    else:
+                        print("Ingresa una opcion valida")
                     
-                
         
         
     #def pop(self, met, raiz):
