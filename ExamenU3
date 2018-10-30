@@ -1,0 +1,107 @@
+#Examen Unidad 3
+#Ramirez Gonzalez Leonardo Ramses
+
+apuntador = None
+
+class Nodo(object):
+    
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+        
+    def push(self):
+        global apuntador
+        apuntadorAux = apuntador
+        apuntador.next = self        
+        apuntador = self
+        apuntador.prev = apuntadorAux
+            
+    def peek(raiz, sentido):
+        global apuntador        
+        mostrar = ""
+        if (sentido == 1):
+            reco = raiz
+            while (reco != None):
+                mostrar = mostrar + "[" + str(reco.data) + "] "
+                reco = reco.next
+        else:
+            reco = apuntador
+            while (reco != None):
+                mostrar = mostrar + "[" + str(reco.data) + "] "
+                reco = reco.prev      
+        print (mostrar)
+        
+    def pop(raiz, item):
+        reco = raiz
+        encontrado = 0
+        while (encontrado != 1 and reco != None):            
+            if (reco.data == item):
+                encontrado = 1
+            else:
+                reco = reco.next
+                
+        if (encontrado == 1):   
+            reco.prev.next = reco.next
+            reco.next.prev = reco.prev
+            del reco
+            print ("Se ha eliminado: " + str(item))            
+        else:
+            print("No encontrado.")
+            
+    def search(raiz, item):        
+        reco = raiz
+        encontrado = 0
+        while (encontrado != 1 and reco != None):            
+            if (reco.data == item):
+                encontrado = 1
+            else:
+                reco = reco.next
+        if (encontrado == 1):
+            print("Encontrado: "+str(reco.data)+" \n\tPrev: "+str(reco.prev.data)+" \n\tNext: "+str(reco.next.data))
+        else:
+            print(item +" No encontrado.")
+                
+        
+            
+   
+
+opcion = 0
+raiz = Nodo("raiz")
+apuntador = raiz
+miNodo = None
+
+#Ingrasa valores iniciales
+for i in range (1, 10):
+    miNodo = Nodo(str(i))
+    miNodo.push()
+
+#Leer de izquierda a derecha
+Nodo.peek(raiz, 1)
+
+#Leer de derecha a derecha
+Nodo.peek(raiz, 2)
+
+#Instertar 10, 11, 13
+miNodo = Nodo("10")
+miNodo.push()
+miNodo = Nodo("11")
+miNodo.push()
+miNodo = Nodo("13")
+miNodo.push()
+
+#Eliminar 8, 1
+Nodo.pop(raiz, "8")
+Nodo.pop(raiz, "1")
+
+#Leer raiz
+print ("Raiz: " + raiz.data)
+
+#Leer final lado derecho y lado izquierdo
+print ("Final de la lista lado derecho: " + apuntador.data + "\nFinal de la lista lado izquierdo: " + raiz.next.data)
+
+#Buscar 0, 7, 8, 1
+Nodo.search(raiz, "0")
+Nodo.search(raiz, "7")
+Nodo.search(raiz, "8")
+Nodo.search(raiz, "1")
