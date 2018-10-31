@@ -1,4 +1,5 @@
 apuntador = None
+leidos = 1
 
 class Nodo(object):
     
@@ -6,6 +7,7 @@ class Nodo(object):
         self.data = data
         self.left = None
         self.right = None
+        self.visitado = 0
         
     def push(self):
         global raiz
@@ -29,7 +31,7 @@ class Nodo(object):
             nodosAct = apuntador.data
                 
             print ("("+nodosIzq+") <- "+"("+nodosAct+")"+" -> ("+nodosDer+")")
-            direcc = input("\n\t\t1)Izquierda\n\t\t2)Derecha\n\t\t3)Regresar a la raiz\t")
+            direcc = int(input("\n\t\t1)Izquierda\n\t\t2)Derecha\n\t\t3)Regresar a la raiz\t"))
             if (direcc == 1):
                 if (apuntador.left != None):
                     apuntador = apuntador.left
@@ -50,13 +52,26 @@ class Nodo(object):
                         apuntador = raiz
                     else:
                         print("Ingresa una opcion valida")
+
+    def inorden(raiz):
+        global leido
+        
+        apuntador = raiz
+        ancla = raiz
+        terminado
+
+        while(terminado != 1):
+            if (apuntador.left != None and apuntador.left.visitado != leido):
+                apuntador = apuntador.left
+            else:
+                if (apuntador.right != None and apuntador.right.visitado != leido):
+                    apuntador = apuntador.right
+                else:
+                    if (apuntador.left == None and apuntador.right == None and apuntador.visitado != leido):
+                        
+                    
                     
         
-        
-    #def pop(self, met, raiz):
-            
-    #def peek(raiz):
-   
 
 opcion = 0
 raiz = Nodo("raiz")
@@ -64,7 +79,7 @@ apuntador = raiz
 miNodo = None
 
 while opcion != 5:
-    opcion = input("\nMENU:\n\t1)Agregar Nodo\n\t2)Eliminar nodo\n\t3)Leer nodos\t  ")
+    opcion = int(input("\nMENU:\n\t1)Agregar Nodo\n\t2)Eliminar nodo\n\t3)Leer nodos\t  "))
     if opcion == 1:
         miNodo = Nodo(input("Ingresa nodo: "))
         miNodo.push()
@@ -76,6 +91,6 @@ while opcion != 5:
                 Nodo.peek(raiz)
             else:
                 if opcion == 5:
-                    print "Goodbye :)"
+                    print ("Goodbye :)")
                 else:
                     print("Ingresa una opcion valida")
