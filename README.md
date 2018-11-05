@@ -35,15 +35,15 @@
   <li b>Actividad14: </b> <i> Colas dobles: add</i>
   <li b>Actividad15: </b> <i> Colas dobles: remove</i>
   <li b>Actividad16: </b> <i> Colas dobles: show</i>
-  <li b>Actividad17: </b> <i> Listas enlazadas: add</i>
-  <li b>Actividad18: </b> <i> Listas enlazadas: remove</i>
-  <li b>Actividad19: </b> <i> Listas enlazadas: show</i>
-  <li b>Actividad20: </b> <i> Listas doblemente enlazadas: add</i>
-  <li b>Actividad21: </b> <i> Listas doblemente enlazadas: remove</i>
-  <li b>Actividad22: </b> <i> Listas doblemente enlazadas: show</i>
-  <li b>Actividad23: </b> <i> Listas circulares add</i>
-  <li b>Actividad24: </b> <i> Listas circulares: remove</i>
-  <li b>Actividad25: </b> <i> Listas circulares: show</i>
+  <li b>Actividad17: </b> <i> Listas enlazadas: add*</i>
+  <li b>Actividad18: </b> <i> Listas enlazadas: remove*</i>
+  <li b>Actividad19: </b> <i> Listas enlazadas: show*</i>
+  <li b>Actividad20: </b> <i> Listas doblemente enlazadas: add*</i>
+  <li b>Actividad21: </b> <i> Listas doblemente enlazadas: remove*</i>
+  <li b>Actividad22: </b> <i> Listas doblemente enlazadas: show*</i>
+  <li b>Actividad23: </b> <i> Listas circulares add*</i>
+  <li b>Actividad24: </b> <i> Listas circulares: remove*</i>
+  <li b>Actividad25: </b> <i> Listas circulares: show*</i>
   <li b>Actividad26: </b> <i> Arboles: add</i>
   <li b>Actividad27: </b> <i> Arboles: remove</i>
   <li b>Actividad28: </b> <i> Arboles: show</i>
