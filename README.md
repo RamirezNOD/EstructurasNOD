@@ -44,7 +44,7 @@
   <li b>Actividad23: </b> <i> Listas circulares add*</i>
   <li b>Actividad24: </b> <i> Listas circulares: remove*</i>
   <li b>Actividad25: </b> <i> Listas circulares: show*</i>
-  <li b>Actividad26: </b> <i> Arboles: add</i>
-  <li b>Actividad27: </b> <i> Arboles: remove</i>
-  <li b>Actividad28: </b> <i> Arboles: show</i>
+  <li b>Actividad26: </b> <i> Arboles</i>
+  <li b>Actividad27: </b> <i> Arboles: Inorden</i>
+  <li b>Actividad28: </b> <i> Arboles: Postorden*</i>
 </ul>
