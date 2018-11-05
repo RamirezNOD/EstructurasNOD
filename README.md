@@ -46,5 +46,8 @@
   <li b>Actividad25: </b> <i> Listas circulares: show*</i>
   <li b>Actividad26: </b> <i> Arboles</i>
   <li b>Actividad27: </b> <i> Arboles: Inorden</i>
-  <li b>Actividad28: </b> <i> Arboles: Postorden*</i>
+  <li b>Actividad28: </b> <i> Arboles: Preorden*</i>
+  <li b>Actividad29: </b> <i> Arboles: Postorden*</i>
+  <li b>Actividad30: </b> <i> Arboles Balanceados*</i>
+  <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja*</i>
 </ul>
