@@ -38,9 +38,9 @@
   <li b>Actividad17: </b> <i> Listas enlazadas: add*</i>
   <li b>Actividad18: </b> <i> Listas enlazadas: remove*</i>
   <li b>Actividad19: </b> <i> Listas enlazadas: show*</i>
-  <li b>Actividad20: </b> <i> Listas doblemente enlazadas: add*</i>
-  <li b>Actividad21: </b> <i> Listas doblemente enlazadas: remove*</i>
-  <li b>Actividad22: </b> <i> Listas doblemente enlazadas: show*</i>
+  <li b>Actividad20: </b> <i> Listas doblemente enlazadas: add</i>
+  <li b>Actividad21: </b> <i> Listas doblemente enlazadas: remove</i>
+  <li b>Actividad22: </b> <i> Listas doblemente enlazadas: show</i>
   <li b>Actividad23: </b> <i> Listas circulares add*</i>
   <li b>Actividad24: </b> <i> Listas circulares: remove*</i>
   <li b>Actividad25: </b> <i> Listas circulares: show*</i>
