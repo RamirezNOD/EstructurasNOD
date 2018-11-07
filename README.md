@@ -49,5 +49,5 @@
   <li b>Actividad28: </b> <i> Arboles: Preorden*</i>
   <li b>Actividad29: </b> <i> Arboles: Postorden*</i>
   <li b>Actividad30: </b> <i> Arboles Balanceados*</i>
-  <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja*</i>
+  <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja</i>
 </ul>
