@@ -15,11 +15,11 @@
   <li b>Tarea13: </b> <i> Listas elazadas</i>
   <li b>Tarea14: </b> <i> Listas doblemente enlazadas</i>
   <li b>Tarea15: </b> <i> Listas enlazadas circulares</i>
-  <li b>Tarea16: </b> <i> Arboles</i>
-  <li b>Tarea17: </b> <i> Arboles balanceados</i>
-  <li b>Tarea18: </b> <i> Metodos de ordenamiento internos</i>
-  <li b>Tarea19: </b> <i> Metodos de ordenamiento externos</i>
-  <li b>Tarea20: </b> <i> Metodos de busqueda</i>
+  <li b>Tarea16: </b> <i> Arboles*</i>
+  <li b>Tarea17: </b> <i> Arboles balanceados*</i>
+  <li b>Tarea18: </b> <i> Metodos de ordenamiento internos*</i>
+  <li b>Tarea19: </b> <i> Metodos de ordenamiento externos*</i>
+  <li b>Tarea20: </b> <i> Metodos de busqueda*</i>
 </ul>
 
 <ul>
@@ -54,7 +54,7 @@
   <li b>Actividad29: </b> <i> Arboles: Postorden*</i>
   <li b>Actividad30: </b> <i> Arboles Balanceados*</i>
   <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja</i>
-  <li b>Actividad32: </b> <i> Ordenamiento Interno: Quicksort</i>
+  <li b>Actividad32: </b> <i> Ordenamiento Interno: Quicksort*</i>
   <li b>Actividad33: </b> <i> Ordenamiento Interno: Shellsort</i>
-  <li b>Actividad34: </b> <i> Ordenamiento Externo: Merge</i>
+  <li b>Actividad34: </b> <i> Ordenamiento Externo: Merge*</i>
 </ul>
