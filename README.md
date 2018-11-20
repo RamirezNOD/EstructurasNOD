@@ -15,8 +15,8 @@
   <li b>Tarea13: </b> <i> Listas elazadas</i>
   <li b>Tarea14: </b> <i> Listas doblemente enlazadas</i>
   <li b>Tarea15: </b> <i> Listas enlazadas circulares</i>
-  <li b>Tarea16: </b> <i> Arboles*</i>
-  <li b>Tarea17: </b> <i> Arboles balanceados*</i>
+  <li b>Tarea16: </b> <i> Arboles</i>
+  <li b>Tarea17: </b> <i> Arboles balanceados</i>
   <li b>Tarea18: </b> <i> Metodos de ordenamiento internos*</i>
   <li b>Tarea19: </b> <i> Metodos de ordenamiento externos*</i>
   <li b>Tarea20: </b> <i> Metodos de busqueda*</i>
