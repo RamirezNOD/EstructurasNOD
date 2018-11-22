@@ -52,7 +52,7 @@
   <li b>Actividad27: </b> <i> Arboles: Inorden</i>
   <li b>Actividad28: </b> <i> Arboles: Preorden</i>
   <li b>Actividad29: </b> <i> Arboles: Postorden</i>
-  <li b>Actividad30: </b> <i> Arboles Balanceados*</i>
+  <li b>Actividad30: </b> <i> Arboles Balanceados</i>
   <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja</i>
   <li b>Actividad32: </b> <i> Ordenamiento Interno: Quicksort*</i>
   <li b>Actividad33: </b> <i> Ordenamiento Interno: Shellsort</i>
