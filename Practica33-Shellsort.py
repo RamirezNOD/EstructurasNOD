@@ -3,32 +3,26 @@ from random import randint
 def shellSort():
     global miArreglo
     reco = len(miArreglo)//2
-    index = 0
-    aux = 0
-    cambio = 0
-    #Hasta que la mitad de la longitud sea 0
-    while(reco!=0):
-        #Iteramos para recorrer el indice, de ser posible
-        for salto in range(0, len(miArreglo)//reco -1):
-            #Comparamos segun el salto reco
-            for index in range(salto,len(miArreglo)-reco,reco):
-                #Si es mayor se intercambian
-                if (miArreglo[index] > miArreglo[index+reco]):
-                    aux = miArreglo[index]
-                    miArreglo[index] = miArreglo[index+reco]
-                    miArreglo[index+reco] = aux
-        reco = reco//2
 
-    #Damos una ultima pasada para asegurarnos.
-    for i in range(0,len(miArreglo)-1):
-        if miArreglo[i] > miArreglo[i+1]:
-            aux = miArreglo[i]
-            miArreglo[i] = miArreglo[i+1]
-            miArreglo[i+1] = aux
+    #Hasta que reco sera 0.
+    while(reco!=0):
+        #Decimos que hay cambio para entrar al ciclo
+        cambio = 1
+        #Mientras haya cambio, seguiremos iterando
+        while cambio == 1:
+            cambio = 0
+            #Comparamos los elementos usando el reco para tomarlos.
+            for index in range(0,len(miArreglo)-reco):
+                #Si es mayor, se intercambian
+                if (miArreglo[index] > miArreglo[index+reco]):
+                    miArreglo[index],miArreglo[index+reco]=miArreglo[index+reco],miArreglo[index]
+                    cambio = 1
+        #Dividimos nuevamente el reco
+        reco = reco//2
                 
-    print(miArreglo)
     
 opcion = 0
+
 #Generamos un arreglo al azar
 miArreglo = []
 for i in range(10):
@@ -46,8 +40,14 @@ while (opcion != "5"):
         if opcion == "2":
             print(miArreglo)
             shellSort()
+            print(miArreglo)
         else:
             if opcion != "5":
                 print("Ingrese opcion valida")
   
 print("Adios.") 
+
+
+
+
+
