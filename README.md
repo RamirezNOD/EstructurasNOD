@@ -45,9 +45,9 @@
   <li b>Actividad20: </b> <i> Listas doblemente enlazadas: add</i>
   <li b>Actividad21: </b> <i> Listas doblemente enlazadas: remove</i>
   <li b>Actividad22: </b> <i> Listas doblemente enlazadas: show</i>
-  <li b>Actividad23: </b> <i> Listas circulares add*</i>
-  <li b>Actividad24: </b> <i> Listas circulares: remove*</i>
-  <li b>Actividad25: </b> <i> Listas circulares: show*</i>
+  <li b>Actividad23: </b> <i> Listas circulares add</i>
+  <li b>Actividad24: </b> <i> Listas circulares: remove</i>
+  <li b>Actividad25: </b> <i> Listas circulares: show</i>
   <li b>Actividad26: </b> <i> Arboles</i>
   <li b>Actividad27: </b> <i> Arboles: Inorden</i>
   <li b>Actividad28: </b> <i> Arboles: Preorden</i>
@@ -57,6 +57,6 @@
   <li b>Actividad32: </b> <i> Ordenamiento Interno: Quicksort</i>
   <li b>Actividad33: </b> <i> Ordenamiento Interno: Shellsort</i>
   <li b>Actividad34: </b> <i> Ordenamiento Externo: Merge*</i>
-  <li b>Actividad35: </b> <i> Busqueda: Secuencial*</i>
+  <li b>Actividad35: </b> <i> Busqueda: Secuencial</i>
   <li b>Actividad36: </b> <i> Busqueda: wea*</i>
 </ul>
