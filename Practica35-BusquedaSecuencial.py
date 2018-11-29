@@ -2,7 +2,6 @@ from random import randint
 
 def buscar(item):
     global miArreglo
-    reco = len(miArreglo)//2
     i = 0
     encontrado = False
 
