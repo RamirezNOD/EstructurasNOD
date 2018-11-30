@@ -56,7 +56,7 @@
   <li b>Actividad31: </b> <i> Ordenamiento Interno: Burbuja</i>
   <li b>Actividad32: </b> <i> Ordenamiento Interno: Quicksort</i>
   <li b>Actividad33: </b> <i> Ordenamiento Interno: Shellsort</i>
-  <li b>Actividad34: </b> <i> Ordenamiento Externo: Merge*</i>
+  <li b>Actividad34: </b> <i> Ordenamiento Externo: Merge</i>
   <li b>Actividad35: </b> <i> Busqueda: Secuencial</i>
-  <li b>Actividad36: </b> <i> Busqueda: wea*</i>
+  <li b>Actividad36: </b> <i> Busqueda: Binaria</i>
 </ul>
